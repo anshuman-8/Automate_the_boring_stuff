@@ -1,2 +1,3 @@
 # Automatetheboringstuff
-working on chapter 1
+
+working on chapter 3
