@@ -71,3 +71,42 @@
     ***A***.    append() , adds an value to the end of the list\
                 insert(), inserts the value in the perticular given index
 ------
+11.  What are two ways to remove values from a list?
+
+        ***A***.    
+        ```python
+        list.remove(value)
+        del list[index]
+        ``` 
+---
+12. Name a few ways that list values are similar to string values.
+
+    Strings and lists both can be concatinated, and we can access any perticular value providing its index.
+-----
+13. What is the difference between lists and tuples?
+
+    ***A***. List is a mutable type data, whereas tuple is immutable.
+---------
+14. How do you type the tuple value that has just the integer value 42 in it?
+
+
+    ***A***. 
+    ```python
+    variable=(42)
+    `````````
+----------------
+15. How can you get the tuple form of a list value? How can you get the list form of a tuple value?
+
+    ***A***.
+    ```python
+    >>> tuple(['List'])
+    >>> list(('tuple'))
+    ```
+----------
+16. Variables that “contain” list values don’t actually contain lists directly. What do they contain instead?
+
+    ***A***. All the variables contain the reference to the list value in hay.
+-------
+17.  What is the difference between copy.copy() and copy.deepcopy()?
+
+     ***A***. If the list to be copied contains another list then deepcopy() should be used. Else copy() can be used.
