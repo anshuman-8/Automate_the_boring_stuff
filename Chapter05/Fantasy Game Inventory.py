@@ -14,13 +14,21 @@ def displayInventory(inventory):
     print("Total number of items: " + str(item_total))
 
 displayInventory(stuff)
+print(stuff['torch'])
 
 def addToInventory(inventory, addedItems):
     # your code goes here
-    while True:
+    for newItem in addedItems:
+        if newItem not in inventory.keys():
+            inventory[newItem]=1
+        else:
+            a=inventory[newItem]+1
+            inventory[newItem]=a
+    return inventory
         
 
 inv = {'gold coin': 42, 'rope': 1}
 dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
 inv = addToInventory(inv, dragonLoot)
+print()
 displayInventory(inv)
