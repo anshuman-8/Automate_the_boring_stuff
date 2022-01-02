@@ -5,5 +5,5 @@
 
 ### [Link to book](https://automatetheboringstuff.com/)
 
-* Currently working on chapter 11
+* Currently working on chapters
 
