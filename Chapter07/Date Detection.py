@@ -5,6 +5,7 @@ def isLeapFeb(y,m):
         return True
     else:
         return False
+    
 
 def validDateCheck(d,m,y):
     if m>12:
@@ -16,6 +17,9 @@ def validDateCheck(d,m,y):
             return False
     if m==2 and not isLeapFeb(y,m):
         if d!=28:
+            return False
+    if m not in [1,3,5,7,8,10,12]:
+        if d==31:
             return False
     return True
 

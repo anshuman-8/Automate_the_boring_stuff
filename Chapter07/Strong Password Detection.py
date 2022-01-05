@@ -3,7 +3,7 @@ import re
 word=input("Enter the password to check: ")
 
 if len(word) < 8:
-    print("not valid")
+    print("not valid should have more than 8 charcters.")
     exit()
 
 numcheck=re.compile(r'\d')

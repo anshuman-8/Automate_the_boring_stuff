@@ -3,7 +3,7 @@ def printTable(li):
     
     for r in range(4):
         for c in range(3):
-            print(li[c][r]," ", end='')
+            print(li[c][r].rjust(8,' ')," ", end='')
         print()
 
 

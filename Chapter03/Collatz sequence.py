@@ -18,3 +18,6 @@ while True:
     a=collatz(a)
     if a==1:
         break
+
+
+# input validation program also written within this same program
