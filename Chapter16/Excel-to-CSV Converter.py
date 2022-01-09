@@ -1,9 +1,11 @@
 import csv, openpyxl, os
+from pathlib import Path
 
 # wb=openpyxl.load_workbook('/home/anshuman/Downloads/automate_online-materials/censuspopdata.xlsx')
 # csvFile=csv.open('censuspopdata.csv')
+a=os.getcwd()+"/Chapter16"
 
-for excelFile in os.listdir('.'):
+for excelFile in os.listdir(a):
     # Skip non-xlsx files, load the workbook object.
     if not excelFile.endswith('.xlsx'):
         print(str(excelFile))
@@ -12,7 +14,7 @@ for excelFile in os.listdir('.'):
         wb=openpyxl.Workbook(excelFile)
     # for sheetName in wb.sheetnames():
      # Loop through every sheet in the workbook.
-        sheetName=wb.worksheets[0]
+        sheetName=wb.active
         sheet = wb.get_sheet_by_name(sheetName)
         csvFile=csv.open(str(excelFile)+'_'+str(sheetName)+'.csv')
         writer=csv.writer(csvFile)
@@ -29,5 +31,5 @@ for excelFile in os.listdir('.'):
                 # Append each cell's data to rowData.
             writer.writerow(rowData)
             # Write the rowData list to the CSV file.
-
+        csvFile.save('Chapter16/newcsvfile.csv')
         csvFile.close()
